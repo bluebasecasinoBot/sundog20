@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dashed #171717; */
+}
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: brat;
+    src: url('./bratsy_script/Bratsy\ Script\ Demo.ttf');
+}
+@font-face {
+    font-family: duck;
+    src: url('./copyduck/Copyduck.ttf');
+}
+@font-face {
+    font-family: flame;
+    src: url('./hellbone/Hellbone-Demo.otf');
+}
+@font-face {
+    font-family: kage;
+    src: url('./kage_retro/Kage\ Retro.otf');
+}
+@font-face {
+    font-family: abs;
+    src: url('./a_abstract_groovy/aAbstractGroovy.ttf');
+}
+.extra_large_text
+{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.page1_float
+{
+    font-size: 5rem;
+    color: rgb(170, 26, 26);
+    text-align: center;
+    width: 100%;
+    transition: all linear .3s;
+}
+.page1_float:hover{
+    animation:bump;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,-0.25, 0, 1.21);
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.slider_anime
+{
+    animation:slide;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.sun
+{
+    height:700px;
+    width:700px;
+    position: relative;
+}
+.sun::after
+{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./sun_dog.png');
+    content: '';
+    animation:protude;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.sun::before
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url("./ray.svg");
+    content: '';
+    animation:sunray;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.bump{
+    animation:bump;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.to_fro
+{
+    animation:to_fro;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.54, 1.42, 0.6,-0.24);
+    animation-iteration-count: infinite;
+}
+.page2_h1_text
+{
+    font-size: 35px;
+    transform-origin: center;
+}
+
+.page2_h1_text_3
+{
+    font-size: 40px;
+    transform-origin: center;
+}
+.ca_text
+{
+    font-size: 30px;
+}
+.sunomics_treats
+{
+    flex-wrap: nowrap;
+}
+@media screen and (max-width:850px)
+{
+    .page1_float
+    {
+        font-size: 4rem;
+    }
+    .sun{
+        height: 400px;
+        width: 400px;
+    }
+    .page2_h1_text
+    {
+        font-size: 30px;
+    }
+    .page2_h1_text_3
+    {
+        font-size: 32px;
+        transform-origin: center;
+    }
+}
+
+@media screen and (max-width:550px)
+{
+    .page1_float
+    {
+        font-size: 3rem;
+    }
+    .sun{
+        height: 350px;
+        width: 350px;
+    }
+    .extra_large_text
+    {
+        font-size: 5rem;
+        font-weight: 900;
+    }
+    .sunomics_treats
+    {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:400px){
+    .ca_text
+    {
+        font-size: 18px;
+    }
+}
+
+.flip_btn
+{
+    box-shadow: 5px 5px 4px #171717;
+}
+.flip_btn:hover
+{
+    animation:flip;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    animation-direction: alternate-reverse;
+    box-shadow: unset;
+}
+.inhale
+{
+    animation:inhale;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    animation-direction: alternate-reverse;
+}
+
+.wiggle:hover{
+    animation:wiggle;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,-0.25, 0, 1.21);
+    animation-iteration-count: 2;
+    transform-style: preserve-3d;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes flip {
+    0%{
+        transform: rotateX(0deg) scale(1);
+    }
+    25%{
+        transform: rotateX(10deg) scale(1.2);
+    }
+    50%{
+        transform: rotateX(15deg) scale(1);
+    }
+    60%{
+        transform: rotateX(670deg) scale(1.2);
+    }
+    100%{
+        transform: rotateX(720deg) scale(1);
+    }
+}
+@keyframes inhale {
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.4);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes sunray {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(360deg);
+    }
+    0%{
+        transform: rotateZ(720deg);
+    }
+}
+
+@keyframes protude
+{
+    0%
+    {
+        transform:translateY(-50%) translateX(-50%) scale(1);
+    }
+    50%
+    {
+        transform:translateY(-50%) translateX(-50%) scale(1.2);
+    }
+    100%
+    {
+        transform:translateY(-50%) translateX(-50%) scale(1);
+    }
+}
+
+@keyframes bump{
+    0%{
+        transform: scale(1);
+    }
+
+    0%{
+        transform: scale(1.2);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide
+{
+    0%{
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+@keyframes to_fro {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.4);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes wiggle {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.15);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
