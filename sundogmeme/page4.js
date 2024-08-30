@@ -37,7 +37,7 @@ __SYD.page4 = () =>{
                 },
                 [
                     __SYD.large_btn('SUN DOG 2.0' , 'The dog is good '),
-                    __SYD.large_btn('SUN DOG 2.0 TREATS' , 'we bark the to sun'),
+                    __SYD.large_btn('SUN DOG 2.0 TREATS' , 'we bark to da sun'),
                 ]
             )
         ]
